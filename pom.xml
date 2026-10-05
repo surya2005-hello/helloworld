@@ -11,7 +11,6 @@
     <artifactId>helloworld</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <!-- JAR -> WAR -->
     <packaging>war</packaging>
 
     <properties>
@@ -22,11 +21,11 @@
 
     <dependencies>
 
-        <!-- Servlet API for Tomcat 10+ -->
+        <!-- Tomcat 9 / Servlet 4 -->
         <dependency>
-            <groupId>jakarta.servlet</groupId>
-            <artifactId>jakarta.servlet-api</artifactId>
-            <version>6.0.0</version>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
 
