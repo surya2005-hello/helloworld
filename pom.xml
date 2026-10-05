@@ -11,7 +11,8 @@
     <artifactId>helloworld</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <packaging>jar</packaging>
+    <!-- JAR -> WAR -->
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -20,12 +21,27 @@
     </properties>
 
     <dependencies>
+
+        <!-- Servlet API for Tomcat 10+ -->
+        <dependency>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JUnit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
+
     </dependencies>
+
+    <build>
+        <finalName>helloworld</finalName>
+    </build>
 
 </project>
